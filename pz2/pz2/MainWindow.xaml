@@ -1,0 +1,75 @@
+﻿<Window x:Class="pz2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pz2"
+        xmlns:views="clr-namespace:pz2.Views"
+        xmlns:viewModel="clr-namespace:pz2.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="635"
+        Width="800">
+    <Window.DataContext>
+        <viewModel:MainWindowViewModel></viewModel:MainWindowViewModel>
+    </Window.DataContext>
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:NetworkEntitiesViewModel}">
+            <views:NetworkEntitiesView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:NetworkDisplayViewModel}">
+            <views:NetworkDisplayView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:MeasurmentGraphViewModel}">
+            <views:MeasurmentGraphView />
+        </DataTemplate>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <DockPanel Background="#635e5e"
+                   Grid.Row="0"
+                   >
+            <Menu Background="#635e5e"
+                  DockPanel.Dock="Top"
+                  Height="21">
+                <MenuItem
+                            FontWeight="Bold"
+                          Command="{Binding NavCommand}"
+                          CommandParameter="NetworkEntities">
+                    <MenuItem.Header>
+                        <TextBlock Width="243"
+                                   Text="Network Entities"
+                                   TextAlignment="Center"></TextBlock>
+                    </MenuItem.Header>
+                </MenuItem>
+                <MenuItem Command="{Binding NavCommand}"
+                          CommandParameter="NetworkDisplay">
+                    <MenuItem.Header>
+                        <TextBlock Width="249"
+                                   FontWeight="Bold"
+                                    Text="Network Display"
+                                    TextAlignment="Center"></TextBlock>
+                    </MenuItem.Header>
+                </MenuItem>
+                <MenuItem Command="{Binding NavCommand}"
+                          CommandParameter="MeasurementGraph">
+                    <MenuItem.Header>
+                        <TextBlock 
+                                   
+                                    Width="150"
+                                   FontWeight="Bold"
+                                   Text="Measurement Graph"
+                                   TextAlignment="Center"></TextBlock>
+                    </MenuItem.Header>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Grid Grid.Row="1">
+            <ContentControl Content="{Binding CurrentViewModel}" />
+        </Grid>
+    </Grid>
+</Window>
