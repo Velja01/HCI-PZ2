@@ -159,6 +159,31 @@
                 HorizontalAlignment="Left"
                 Margin="616,539,0,0"
                 VerticalAlignment="Top" />
+        <Label x:Name="label5"
+               Content="{Binding Upozorenje}"
+               
+               Foreground="Red"
+               HorizontalAlignment="Left"
+               Margin="506,509,0,0"
+               VerticalAlignment="Top" />
+        <Label x:Name="label6"
+               Content="{Binding ListaPrazna}"
+               Foreground="Red"
+               HorizontalAlignment="Left"
+               Margin="580,391,0,0"
+               VerticalAlignment="Top" />
+        <ComboBox x:Name="comboBox2"
+                  HorizontalAlignment="Left"
+                  ItemsSource="{Binding PrethodnePretrage}"
+                  Margin="640,257,0,0"
+                  VerticalAlignment="Top"
+                  Width="120" />
+        <Label x:Name="label7"
+               Content="Prethodne Pretrage"
+               FontWeight="Bold"
+               HorizontalAlignment="Left"
+               Margin="640,212,0,0"
+               VerticalAlignment="Top" />
 
 
 

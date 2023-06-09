@@ -33,7 +33,7 @@ namespace pz2.ViewModel
                 CircleMarkers.Add(marker);
             }
 
-            SelectedType = ComboBoxItems[0].ToString();
+            //SelectedType = ComboBoxItems[0].ToString();
             SetValuesToCircleMarkers(LoadLastFiveUpdates(SelectedType));
         }
 
@@ -57,7 +57,7 @@ namespace pz2.ViewModel
 
                 // Dobijanje datuma sa vremenom
                 string dateTimeStr = parts[1].Trim();
-
+                int index = int.Parse(parts[3].Substring(parts[3].Length-1));
                 // Dobijanje vrednosti
                 int value = int.Parse(parts[3]);
 
@@ -68,8 +68,10 @@ namespace pz2.ViewModel
                 string type = line.Substring(0, line.IndexOf(','));
                 string val = line.Substring(line.IndexOf(',') + 2);
                 */
-                if (lastFiveUpdates.Count < 5)
+
+                if (lastFiveUpdates.Count < 5 )
                 {
+                    
                     lastFiveUpdates.Add(new CircleMarker(value, dateTimeStr));
                 }
             }

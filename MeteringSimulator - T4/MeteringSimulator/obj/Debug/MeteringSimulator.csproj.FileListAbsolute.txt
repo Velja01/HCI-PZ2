@@ -14,3 +14,19 @@ C:\Users\veljk\Desktop\pz2novi\MeteringSimulator - T4\MeteringSimulator\obj\Debu
 C:\Users\veljk\Desktop\pz2novi\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.CoreCompileInputs.cache
 C:\Users\veljk\Desktop\pz2novi\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.exe
 C:\Users\veljk\Desktop\pz2novi\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.pdb
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\bin\Debug\MeteringSimulator.exe.config
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\bin\Debug\MeteringSimulator.exe
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\bin\Debug\MeteringSimulator.pdb
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.AssemblyReference.cache
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.SuggestedBindingRedirects.cache
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MainWindow.g.cs
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\App.g.cs
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator_MarkupCompile.cache
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator_MarkupCompile.lref
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MainWindow.baml
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.g.resources
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.Properties.Resources.resources
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.GenerateResource.cache
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.CoreCompileInputs.cache
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.exe
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\MeteringSimulator - T4\MeteringSimulator\obj\Debug\MeteringSimulator.pdb

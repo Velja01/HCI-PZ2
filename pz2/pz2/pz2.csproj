@@ -63,6 +63,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\CircleMarker.cs" />
     <Compile Include="Model\Entity.cs" />
+    <Compile Include="Model\EntityType.cs" />
     <Compile Include="Model\Line1.cs" />
     <Compile Include="ValidationBase.cs" />
     <Compile Include="ValidationErrors.cs" />

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\veljk\Desktop\pz2novi\pz2\pz2\obj\Debug\
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\pz2\pz2\obj\Debug\
 pz2
 none
 false
 DEBUG;TRACE
-C:\Users\veljk\Desktop\pz2novi\pz2\pz2\App.xaml
+C:\Users\veljk\Desktop\Skroz radi\HCI-PZ2-main\pz2\pz2\App.xaml
 41793153440
 
-20218568556
-151239214343
+20-1299411572
+15187061055
 MainWindow.xaml;Views\MeasurmentGraphView.xaml;Views\NetworkDisplayView.xaml;Views\NetworkEntitiesView.xaml;
 
-True
+False
 

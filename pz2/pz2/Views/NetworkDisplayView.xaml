@@ -454,7 +454,7 @@
                         Height="100"
                         Width="100"
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
+                        VerticalAlignment="Top"
                         Margin="85,306,0,0"
                         Grid.Column="1">
                     <ContentControl Content="{Binding Path=CanvasCollection[10]}"
@@ -493,7 +493,7 @@
                         Height="100"
                         Width="100"
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
+                        VerticalAlignment="Top"
                         Margin="195,306,0,0"
                         Grid.Column="1">
                     <ContentControl Content="{Binding Path=CanvasCollection[11]}"
@@ -577,6 +577,14 @@
                 </i:Interaction.Triggers>
             </ListView>
         </Border>
+        <Button x:Name="butto"
+                Content="Throw all"
+                HorizontalAlignment="Left"
+                Margin="506,478,0,0"
+                VerticalAlignment="Top"
+                Command="{Binding ThrowAll}"
+                Height="38"
+                Width="108" />
 
     </Grid>
 </UserControl>

@@ -18,7 +18,9 @@ namespace pz2.ViewModel
         public ObservableCollection<Entity> Entities { get; set; }
         public static ObservableCollection<Entity> EntitiesShow { get; set; }
         public ObservableCollection<Entity> SearchedEntities { get; set; }
-        public ObservableCollection<Entity> AllEntities {  get; set; }  
+        public ObservableCollection<Entity> AllEntities { get; set; }
+
+        
         public List<Tip> ComboBoxItems { get; set; } = Enum.GetValues(typeof(Tip)).Cast<Tip>().ToList();
 
         private Tip selectedEntityType;
@@ -27,16 +29,18 @@ namespace pz2.ViewModel
         public MyICommand AddEntity { get; set; }
         public MyICommand DeleteEntity { get; private set; }
 
-
+        
 
         public MyICommand SearchEntities { get; set; }
 
-        
+
 
         private Entity selectedEntity;
         private Entity pomocna;
-        private Entity pomocna1;
+        
 
+        private string listaPrazna;
+        private string upozorenje;
         private bool isNaziv;
         private bool isTip;
         private string nazivEntity;
@@ -51,9 +55,10 @@ namespace pz2.ViewModel
             SearchedEntities = new ObservableCollection<Entity>();
             SearchEntities = new MyICommand(OnSearch);
 
-
+            
 
         }
+        
         private void OnSearch()
         {
             Tip tip = SelectedEntityTypeSearch;
@@ -63,27 +68,48 @@ namespace pz2.ViewModel
             SearchedEntities.Clear();
             if (IsNaziv == true)
             {
-
+                
+                Upozorenje = "";
                 foreach (var entity in AllEntities)
                 {
-                    if (entity.Naziv.Equals(NazivEntity))
+                    if (entity.Naziv.Contains(NazivEntity))
                     {
                         SearchedEntities.Add(entity);
+                        
+                    }
+                    if (entity.Ime.Contains(NazivEntity))
+                    {
+                        SearchedEntities.Add(entity);
+                        
                     }
                 }
             }
             if (IsTip == true)
             {
-
+                Upozorenje = "";
                 foreach (var entity in AllEntities)
                 {
                     if (entity.Tip == tip)
                     {
                         SearchedEntities.Add(entity);
+                        
                     }
                 }
             }
-
+            if (IsTip == false && IsNaziv == false)
+            {
+                Upozorenje = "Morate odabrati tip pretrage";
+                
+                
+            }
+            if (AllEntities.Count == 0)
+            {
+                ListaPrazna = "Lista je prazna";
+            }
+            if (SearchedEntities.Count != 0)
+            {
+                ListaPrazna = "";
+            }
             EntitiesShow.Clear();
             foreach (var entity in SearchedEntities)
             {
@@ -94,11 +120,13 @@ namespace pz2.ViewModel
         public void OnDelete()
         {
             pomocna = selectedEntity;
-            pomocna1 = selectedEntity;
+            
             listaID.Add(selectedEntity.Id);
             Entities.Remove(selectedEntity);
             AllEntities.Remove(pomocna);
-            NetworkDisplayViewModel.EntityList.Remove(pomocna1);
+            NetworkDisplayViewModel.EntityList.Remove(pomocna);
+            OnPropertyChanged("EntityList");
+
 
         }
         public Tip SelectedEntityType
@@ -195,6 +223,29 @@ namespace pz2.ViewModel
             {
                 selectedEntityTypeSearch = value;
                 OnPropertyChanged("SelectedEntityTypeSearch");
+            }
+        }
+
+        public string Upozorenje
+        {
+            get { return upozorenje; }
+            set
+            {
+                upozorenje = value;
+                OnPropertyChanged("Upozorenje");
+            }
+        }
+
+        public string ListaPrazna
+        {
+            get
+            {
+                return listaPrazna;
+            }
+            set
+            {
+                listaPrazna = value;
+                OnPropertyChanged("ListaPrazna");
             }
         }
         private bool CanDelete()

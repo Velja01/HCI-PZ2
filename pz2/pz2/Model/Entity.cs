@@ -15,6 +15,7 @@ namespace pz2.Model
         private Tip tip;
         private double vrednost;
         private string slika;
+        private string ime;
 
 
         public Entity()
@@ -34,10 +35,12 @@ namespace pz2.Model
             this.Vrednost = vrednost;
             if (this.Tip == Tip.Solarni_panel)
             {
+                Ime = "Solarni Panel";
                 this.slika = "SolarniPanel.jpg";
             }
             if (this.Tip == Tip.Vetrogenerator)
             {
+                Ime = "Vetrogenerator";
                 this.slika = "Vetrogenerator.jpg";
             }
         }
@@ -100,6 +103,17 @@ namespace pz2.Model
                 OnPropertyChanged("Slika");
             }
         }
+
+        public string Ime
+        {
+            get { return ime; }
+            set
+            {
+                ime = value;
+                OnPropertyChanged("Ime");
+            }
+        }
+
         public bool isValueValid()
         {
             bool isValueValid = true;

@@ -34,6 +34,7 @@ namespace pz2.ViewModel
         private Entity selectedEntity;
         public MyICommand<object> SelectionChanged { get; set; }
         public MyICommand<object> DropEntity { get;set; }
+        public MyICommand ThrowAll { get; set; }
         public MyICommand<object> MouseLeftButtonDown { get; set; }
         public MyICommand MouseLeftButtonUp { get; set; }
         public MyICommand<object> MouseRightButtonDown { get; set; }
@@ -87,9 +88,10 @@ namespace pz2.ViewModel
             SelectionChanged = new MyICommand<object>(OnSelectionChanged);
             OslobodiCanvas = new MyICommand<object>(OnOslobodiCanvas);
             MouseRightButtonDown = new MyICommand<object>(OnMouseRightButtonDown);
-           
+            //ThrowAll = new MyICommand(OnThrowAll) ;
 
         }
+        
         public void OnMouseRightButtonDown(object p)
         {
             int index = Convert.ToInt32(p);
